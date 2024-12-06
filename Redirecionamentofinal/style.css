@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #bc1953;
+}
+    
+body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    background-color: lightblue;
+    text-align: center;
+}
+
+.Certificado2 {
+    background-color: #bc1953;
+    color: white;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    display: block
+}
+
+.barbie {
+    position: relative;
+    top: 10px;
+    height: 900px;
+    width: 100%;
+}

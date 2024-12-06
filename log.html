@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Barbie</title>
+    <style>
+
+h1 {
+    background-color: #7d144c;
+}
+    
+body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+        .pergunta {
+            margin: 20px 0;
+        }
+        .opcao {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 50%;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .opcao.certa {
+            background-color: #d4edda;
+            color: #155724;
+            pointer-events: none;
+        }
+        .opcao.errada {
+            background-color: #f8d7da;
+            color: #721c24;
+            pointer-events: none;
+        }
+        #finalizar, #refazer {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: none;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #refazer {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="saudacao"></h1>
+    <h2>Quiz do Filme da Barbie</h2>
+
+    <div id="quiz-container">
+        <div class="pergunta">
+            <p>1. Qual é o nome completo da Barbie?</p>
+            <button class="opcao" data-correta="false">Barbie Anderson</button>
+            <button class="opcao" data-correta="true">Barbara Millicent Roberts</button>
+            <button class="opcao" data-correta="false">Barbie Stevens</button>
+        </div>
+
+        <div class="pergunta">
+            <p>2. Em que ano a Barbie foi lançada?</p>
+            <button class="opcao" data-correta="false">1955</button>
+            <button class="opcao" data-correta="true">1959</button>
+            <button class="opcao" data-correta="false">1962</button>
+        </div>
+
+        <div class="pergunta">
+            <p>3. Qual é o nome do namorado da Barbie?</p>
+            <button class="opcao" data-correta="false">Joe</button>
+            <button class="opcao" data-correta="true">Ken</button>
+            <button class="opcao" data-correta="false">Tom</button>
+        </div>
+
+        <div class="pergunta">
+            <p>4. Qual é a profissão mais famosa da Barbie?</p>
+            <button class="opcao" data-correta="true">Astronauta</button>
+            <button class="opcao" data-correta="false">Professora</button>
+            <button class="opcao" data-correta="false">Cozinheira</button>
+        </div>
+    </div>
+
+    <button id="finalizar">Finalizar</button>
+    <button id="refazer">Refazer</button>
+
+    <script>
+        // Recupera o nome completo do localStorage
+        const nomeCompleto = localStorage.getItem('nomeCompleto');
+
+        // Exibe a saudação
+        const saudacaoElement = document.getElementById('saudacao');
+        if (nomeCompleto) {
+            saudacaoElement.textContent = `OLA, ${nomeCompleto.toUpperCase()}!`;
+        } else {
+            saudacaoElement.textContent = 'OLA!';
+        }
+
+        // Lógica do Quiz
+        const opcoes = document.querySelectorAll('.opcao');
+        const finalizarBtn = document.getElementById('finalizar');
+        const refazerBtn = document.getElementById('refazer');
+        const perguntas = document.querySelectorAll('.pergunta');
+        let respostasCorretas = 0;
+
+        function resetQuiz() {
+            respostasCorretas = 0;
+            finalizarBtn.style.display = 'none';
+            refazerBtn.style.display = 'none';
+            opcoes.forEach(opcao => {
+                opcao.disabled = false;
+                opcao.classList.remove('certa', 'errada');
+            });
+        }
+
+        opcoes.forEach(opcao => {
+            opcao.addEventListener('click', () => {
+                const correta = opcao.dataset.correta === 'true';
+                if (correta) {
+                    opcao.classList.add('certa');
+                    respostasCorretas++;
+                } else {
+                    opcao.classList.add('errada');
+                }
+                // Desabilitar as opções da pergunta atual
+                const parent = opcao.parentElement;
+                parent.querySelectorAll('.opcao').forEach(op => {
+                    op.disabled = true;
+                });
+
+                // Verificar se todas as perguntas foram respondidas
+                if (respostasCorretas === perguntas.length) {
+                    finalizarBtn.style.display = 'block';
+                } else if (Array.from(perguntas).every(pergunta => 
+                    Array.from(pergunta.querySelectorAll('.opcao')).some(op => 
+                        op.disabled))) {
+                    refazerBtn.style.display = 'block';
+                }
+            });
+        });
+
+        // Redirecionar após finalizar
+        finalizarBtn.addEventListener('click', () => {
+            window.location.href = '../Redirecionamentofinal/index.html';
+        });
+
+        // Refazer o quiz
+        refazerBtn.addEventListener('click', resetQuiz);
+
+        let contador = 0 
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click1",contador  )
+}   
+    </script>
+</body>
+</html>

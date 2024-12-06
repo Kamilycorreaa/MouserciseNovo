@@ -1,0 +1,59 @@
+
+h1 {
+    position: relative;
+    left: 10px;
+    top: 5px;
+
+}
+
+.HeaderPrincipal {
+    background-color: #7d144c;
+    height: 50px;
+}
+
+.Rato {
+    position: relative;
+    left: 1300px;
+    top: -20px;
+}
+
+body {
+    background-color: #bc1953;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: #d1f3db;
+}
+
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+.Computador {
+    height: 100px;
+    margin: auto;
+    display: block;
+}
+
+p {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.Praticar {
+    height: 80px;
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 800px;
+}
+
+.Praticar2 {
+    height: 80px;
+    width: 100px;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+

@@ -1,0 +1,30 @@
+h1 {
+    background-color: #7d144c;
+}
+    
+body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+   
+.Novo2 {
+    color: blue;
+    margin-right: 200px;
+    margin-top: 200px;
+    float: right;
+}
+
+.novos {
+    text-align: center;
+}
+.Paginanova {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Novo {
+    text-align: justify;
+    font-size: 20px;
+}

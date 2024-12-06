@@ -1,0 +1,23 @@
+h1 {
+    background-color: #7d144c;
+    color: white;
+    font-weight: 900;
+}
+  
+body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Novo2 {
+    color: #da9c3c;
+    margin-top: 150px;
+}
+
+.Paginanova {
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px;
+}

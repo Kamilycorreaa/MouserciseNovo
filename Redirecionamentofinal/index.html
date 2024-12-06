@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Parabéns você finalizou o último nível!!!!</h1>
+    <div class="Certificado">
+        <div class="Certificado2">
+
+            <h3 style="text-align: center;font-size: 50px; margin-top: 50px;">Parabéns por finalizar!!</h3>
+            <img class="barbie" src="/barbie.png" alt="">
+            <img style="float: right; margin-right: 10px;margin-top: 130px;" src="" alt="">
+            <p style="position: relative;top: 180px; left: 50px; font-weight: 900; color: white; font-size: 23px;">Você com certeza é mesmo fã da Barbie, hein!!</p>
+            <a href="/Ultima/"><button style="margin-top: 20px; color: red; background-color: white; border-radius: 15px 10px 20px 0px; font-size: 30px; position: relative; left: 50%;">Avançar</button></a>
+
+        </div>
+        <div class="Certificado2"></div>
+    </div>
+<script>
+let contador = 0 
+const html = document.querySelector("html")
+html.addEventListener("click", contarclicks)
+function contarclicks() {
+    contador++
+    localStorage.setItem("click38",contador  )
+
+}
+</script>
+</body>
+</html>

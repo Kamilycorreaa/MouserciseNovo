@@ -1,0 +1,19 @@
+h1 {
+    background-color: #7d144c;
+}
+    
+body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+p {
+    color: rgb(3, 25, 33);
+}
+
+.Botao{
+    display: none;
+}

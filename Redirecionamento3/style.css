@@ -1,0 +1,35 @@
+.Paginanova {
+    float: right;
+    margin-left: -160px;
+}
+
+.Novo2 {
+    float: right;
+    margin-top: 90px;
+}
+
+h1 {
+    background-color: #7d144c;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  body{
+    background-color: #bc1953;
+    color: white;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .BARBIE {
+    position: relative;
+    top: 400px;
+    right: 30px;
+    height: 200px;
+
+  }

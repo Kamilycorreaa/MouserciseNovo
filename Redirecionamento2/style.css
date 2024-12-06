@@ -1,0 +1,20 @@
+.Novo2 {
+  float: right;
+  margin-right: 20px;  
+}
+
+h1 {
+  background-color: #bc1953;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+body{
+  color: white;
+  background-color: #7d144c;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
